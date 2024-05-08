@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@200..800&family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <title>AnimeTv || Demo</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header__title">
+            <img src="./src/images/logotipo.png" alt="Logo Marca">
+            <h1>AnimeTv</h1>
+        </a>
+        <nav class="header__links">
+            <ul class="header__links__list ">
+                <li class="header__links__list__item">
+                    <a href=""><i class="fa-solid fa-house"></i>Home</a>
+                </li>
+                <li class="header__links__list__item">
+                    <a href=""><i class="fa-solid fa-play"></i>Animes</a>
+                </li>
+                <li class="header__links__list__item">
+                    <a href=""><i class="fa-solid fa-eye"></i>About</a>
+                </li>
+                <li class="header__links__list__item">
+                    <a href=""><i class="fa-solid fa-user"></i>Profile</a>
+                </li>
+                <button class="display--none" id="close__menu"><i class="fa-solid fa-xmark"></i></button>
+            </ul>
+        </nav>
+        <div class="header__search">
+            <input type="text" placeholder="Search anime...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button id="button--open" class="display--none"><i class="fa-solid fa-bars"></i></button>
+    </header>
+    <section class="hero">
+        <div class="hero__carousel">
+            <div class="hero__carousel__list">
+                <div class="hero__carousel__list__item">
+                    <img src="./src/images/heros/bg-bleach__hero2.jpeg" alt="">
+                    <div class="content">
+                        <h1 class="title">Bleach: Thousand-Year Blood War</h1>
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                            perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
+                            <div class="buttons">
+                                <button type="button" class="button--transparent">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <a href="#" class="button--transparent">Explore Anime</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="hero__carousel__list__item">
+                    <img src="./src/images/heros/bg-BlackClover__hero.jpg" alt="">
+                    <div class="content">
+                        <h1 class="title">Black Clover</h1>
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                            perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
+                            <div class="buttons">
+                                <button type="button" class="button--transparent">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <a href="#" class="button--transparent">Explore Anime</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="hero__carousel__list__item">
+                    <img src="./src/images/heros/bg-dr__stone__hero.jpg" alt="">
+                    <div class="content">
+                        <h1 class="title">Dr. Stone: Stone Wars Eve of the Battle</h1>
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                            perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
+                            <div class="buttons">
+                                <button type="button" class="button--transparent">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <a href="#" class="button--transparent">Explore Anime</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="hero__carousel__list__item">
+                    <img src="./src/images/heros/bg-demonSlayer__hero.png" alt="">
+                    <div class="content">
+                        <h1 class="title">Dr. Stone: Stone Wars Eve of the Battle</h1>
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                            perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
+                            <div class="buttons">
+                                <button type="button" class="button--transparent">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <a href="#" class="button--transparent">Explore Anime</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="hero__carousel__list__item">
+                    <img src="./src/images/heros/bg-rurouni__hero.jpg" alt="">
+                    <div class="content">
+                        <h1 class="title">Rurouni Kenshin: 
+                            Meiji Kenkaku
+                            Romantan</h1>
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                            perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
+                            <div class="buttons">
+                                <button type="button" class="button--transparent">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <a href="#" class="button--transparent">Explore Anime</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__carousel__thumbnail">
+                <div class="item">
+                    <img src="./src/images/capas/blackClove__card.png" alt="">
+                    <div class="content">
+                        <div class="title">
+                            <h3>Black Clover</h3>
+                        </div>
+                        <div class="desc">
+                            Assista Agora
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./src/images/capas/drStone__card.png" alt="">
+                    <div class="content">
+                        <div class="title">
+                            <h3>dr. stone</h3>
+                        </div>
+                        <div class="desc">
+                            Assista Agora
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./src/images/capas/demonSlayer__card.png" alt="">
+                    <div class="content">
+                        <div class="title">
+                            <h3>demon slayer</h3>
+                        </div>
+                        <div class="desc">
+                            Assista Agora
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./src/images/capas/rurouni__card.png" alt="">
+                    <div class="content">
+                        <div class="title">
+                            <h3>Rurouni Kenshin</h3>
+                        </div>
+                        <div class="desc">
+                            Assista Agora
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./src/images/capas/capa__bleach.png" alt="">
+                    <div class="content">
+                        <div class="title">
+                            <h3>Bleach</h3>
+                        </div>
+                        <div class="desc">
+                            Assista Agora
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__carousel__arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <div class="hero__carousel__time"></div>
+        </div>
+    </section>
+
+    
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>
