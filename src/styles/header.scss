@@ -1,6 +1,6 @@
 @use 'variaveis';
 .header{
-    position: absolute;
+    position: sticky;
     inset:0 0 0 0;
     background-color: map-get(variaveis.$bgColors, "headerDark");
     display: flex;
