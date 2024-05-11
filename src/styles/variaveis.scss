@@ -19,9 +19,12 @@ $bgColors:(
     "primary":#1E1E1E,
     "secudary": #262837,
     "headerDark": rgba(0, 0, 0, .8),
-    "banner": #1E202C
+    "banner": #1E202C,
+    "card": #101118
 );
 
 $buttonsColor:(
-    "primary": #0B95FF
+    "primary": #0B95FF,
+    "card": #FAC919,
+    "bgCard": rgba(11, 149, 255, .5)
 );
