@@ -4,13 +4,23 @@
     display: grid;
     grid-template-columns: repeat($repat, 1fr);
     gap: 36px;
+
+    @media(max-width: 500px){
+        gap: 25px;
+    }
 }
+
 
 @mixin formatCard(){
     width: 100%;
     max-width: 300px;
     height: 300px;
     border-radius: 16px;
+
+    @media(max-width: 500px){
+        max-width: 180px;
+        height: 200px;
+    }
 }
 
 
@@ -27,6 +37,10 @@
         height: 300px;
         object-fit: cover;
         border-radius: 16px;
+
+        @media(max-width: 767px ) {
+            height: 200px;
+        }
     }
 
     &__anuncio{
@@ -52,6 +66,13 @@
                 cursor: pointer;
                 transition: .5s ease;
 
+                @media(max-width: 767px ){
+                    display: block;
+                    width: 10em;
+                    padding: 4px 8px;
+                    font-size: 12px;
+                }
+
                 &:hover{
                     background-color: darken(map-get(variaveis.$colors, primary), $amount: 20);
                     color: #fff;
@@ -67,11 +88,16 @@
             img{
                 width: 40px;
                 height: 40px;
+                @media(max-width: 767px ){
+                    width: 30px;
+                    height: 30px;
+                }
             }
             
             .info{
                 position: relative;
                 padding: 0 16px;
+
                 span{
                     background-color: #FAC919;
                     color: #000;
@@ -92,11 +118,20 @@
                     font-size: 16px;
                     font-weight: 600;
                     margin-left: 12px;
+
+                    @media(max-width: 767px ){
+                        font-size: 15px;
+                    }
                 }
                 .desc{
                     font-family: 'Be Vietnam Pro', sans-serif;
                     font-size: 12px;
                     font-weight: 400;
+
+                    @media(max-width: 767px ){
+                        flex-wrap: wrap;
+                        font-size: 8px;
+                    }
                 }
             }
         }
@@ -109,17 +144,42 @@
 
     &__cards__list{
         @include gridSections(4);
+
+        @media(min-width: 768px) and (max-width: 1023px){
+            @include gridSections(3);
+        }
+
+        @media(max-width: 767px){
+            @include gridSections(2)
+        }
         
 
         &__item{
             @include formatCard();
             background-color: map-get(variaveis.$bgColors, card);
+
+            @media(min-width: 768px) and (max-width: 1023px){
+                &:nth-child(4){
+                    display: none;
+                }
+            }
+
+            @media(max-width: 767px){
+                &:nth-child(4),
+                &:nth-child(3){
+                    display: none;
+                }
+            }
             img{
                 width: 100%;
                 height: 180px;
                 object-fit: cover;
                 aspect-ratio: 3/4;
                 object-position: top;
+
+                @media(max-width: 500px){
+                    height: 100px;
+                }
             }
 
             .card__body{
@@ -129,8 +189,14 @@
                     height: 100px;
                     padding: 10px 20px;
                     flex-wrap: wrap;
+
+
+                    @media(max-width: 500px){
+                        height: 100px;
+                        padding: 8px 10px;
+                    }
                     .title{
-                        width: 90%;
+                        width: 87%;
                         max-width: 170px;
                         height: 100%;
                         max-height: 100px;
@@ -142,6 +208,13 @@
                         font-weight: 600;
                         font-size: 18px;
                         text-transform: capitalize;
+
+                        @media(max-width: 500px){
+                            line-height: 1.2rem;
+                            max-width: 150px;
+                            max-height: 40px;
+                            font-size: 15px;
+                        }
                     }
 
                     .info{
@@ -154,14 +227,27 @@
                         justify-content:space-between;
                         align-items: center;
                         margin: 0 24px;
+
+                        @media(max-width: 500px){
+                            margin: 0 10px;
+                            bottom: 20px;
+                        }
                         span{
                             font-family: 'Be Vietnam Pro', sans-serif;
                             font-weight: 400;
                             font-size: 10px;
-
+                            @media(max-width: 500px){
+                                font-size: 8px;
+                                display: flex;
+                                align-items: center;
+                            }
                             i{
                                 color: map-get(variaveis.$colors, primary);
                                 margin-right: 5px;
+
+                                @media(max-width: 500px){
+                                    font-size: 10px;
+                                }
                             }
                         }
                     }
@@ -178,9 +264,30 @@
     &__cards__list{
         @include gridSections(4);
 
+        @media(min-width: 768px) and (max-width: 1023px){
+            @include gridSections(3)
+        }
+
+        @media(max-width: 767px ){
+            @include gridSections(2)
+        }
+
         &__item{
             position: relative;
             @include formatCard();
+
+            @media(min-width: 768px) and (max-width: 1023px){
+                &:nth-last-child(1){
+                    display: none;
+                }
+            }
+
+            @media(max-width: 767px ){
+                &:nth-child(4),
+                &:nth-child(3){
+                    display: none;
+                }
+            }
             img{
                 width: 100%;
                 height: 300px;
@@ -188,6 +295,10 @@
                 aspect-ratio: 3/4;
                 object-position: top;
                 border-radius: 16px;
+
+                @media(max-width: 500px){
+                    height: 180px;
+                }
             }
                 h5{
                     position:absolute;
@@ -203,6 +314,10 @@
                     text-shadow: map-get(variaveis.$textColors, textShadow), map-get(variaveis.$textColors, textShadow),
                     map-get(variaveis.$textColors, textShadow);
                     -webkit-text-stroke: 5px  #FAC919;
+
+                    @media(max-width: 500px){
+                        font-size: 150px;
+                    }
                 }
 
         }

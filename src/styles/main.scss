@@ -3,6 +3,7 @@
 @use 'hero';
 @use 'animes';
 @use 'footer';
+@use 'informacao';
 *{
     margin: 0;
     padding: 0;
@@ -86,3 +87,6 @@ body{
     max-width: 1450px;
 }
 
+.dp--none{
+    display: none;
+}

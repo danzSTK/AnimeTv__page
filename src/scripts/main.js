@@ -29,6 +29,11 @@ let timeAutonext = 7000;
 let runAutoRun;
 let runTimeOut;
 
+clearTimeout(runAutoRun);
+runAutoRun = setTimeout(() => {
+    nextDom.click()
+}, timeAutonext);
+
 function showSlider(type){
     let itemSlider = document.querySelectorAll('.hero__carousel__list__item');
     let itemThumbnail = document.querySelectorAll('.hero__carousel__thumbnail .item');
@@ -49,9 +54,33 @@ function showSlider(type){
         carouselDom.classList.remove('next');
         carouselDom.classList.remove('prev');
     }, timeRunnig)
-
-    clearTimeout(runAutoRun);
-    runAutoRun = setTimeout(() => {
-        nextDom.click()
-    }, timeAutonext);
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', function(){
+        const positionAtual = window.scrollY;
+
+        if(positionAtual < alturaHero){
+            ocultaElementoDoHeader();
+        }else{
+            exibeElementosDoHeader();
+        }
+    })
+
+    function ocultaElementoDoHeader(){
+        const header = document.querySelector('.header');
+        const search = document.querySelector('.header__search');
+        search.classList.add('dp--none')
+        header.classList.remove('color');
+    }
+
+    function exibeElementosDoHeader(){
+        const header = document.querySelector('.header');
+        const search = document.querySelector('.header__search');
+        search.classList.remove('dp--none')
+        header.classList.add('color')
+    }
+})
