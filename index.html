@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@200..800&family=Poiret+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antic&family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@200..800&family=Poiret+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/main.css">
     <title>AnimeTv || Demo</title>
 </head>
+
 <body>
     <header class="header color">
         <a href="#" class="header__title">
@@ -41,82 +45,127 @@
     </header>
     <section class="hero">
         <div class="hero__carousel">
+            <div class="hero__info">
+                <button class="close__info" onclick="removeClass()" id=""><i class="fa-solid fa-xmark"></i></button>
+                <div class="hero__info__content">
+                    <div class="hero__info__content__item">
+                        <h1 class="title">Bleach: Thousand-Year Blood War</h1>
+                        <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, placeat dolorem ut,
+                            consequuntur inventore impedit perspiciatis officia laboriosam nihil eligendi corrupti
+                            provident sunt dolor modi velit nesciunt! Rerum, consequuntur fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi itaque officia repellat vero repellendus id corporis architecto autem totam obcaecati praesentium, veritatis iure voluptate non, dolore, ratione rerum quis?</p>
+                    </div>
+                    <div class="hero__info__content__item">
+                        <h1 class="title">Black Clove</h1>
+                        <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, placeat dolorem ut,
+                            consequuntur inventore impedit perspiciatis officia laboriosam nihil eligendi corrupti
+                            provident sunt dolor modi velit nesciunt! Rerum, consequuntur fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi itaque officia repellat vero repellendus id corporis architecto autem totam obcaecati praesentium, veritatis iure voluptate non, dolore, ratione rerum quis?</p>
+                    </div>
+                    <div class="hero__info__content__item">
+                        <h1 class="title">Demon Slayer</h1>
+                        <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, placeat dolorem ut,
+                            consequuntur inventore impedit perspiciatis officia laboriosam nihil eligendi corrupti
+                            provident sunt dolor modi velit nesciunt! Rerum, consequuntur fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi itaque officia repellat vero repellendus id corporis architecto autem totam obcaecati praesentium, veritatis iure voluptate non, dolore, ratione rerum quis?</p>
+                    </div>
+                    <div class="hero__info__content__item">
+                        <h1 class="title">Stone</h1>
+                        <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, placeat dolorem ut,
+                            consequuntur inventore impedit perspiciatis officia laboriosam nihil eligendi corrupti
+                            provident sunt dolor modi velit nesciunt! Rerum, consequuntur fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi itaque officia repellat vero repellendus id corporis architecto autem totam obcaecati praesentium, veritatis iure voluptate non, dolore, ratione rerum quis?</p>
+                    </div>
+                    <div class="hero__info__content__item">
+                        <h1 class="title">rurouni/h1>
+                        <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, placeat dolorem ut,
+                            consequuntur inventore impedit perspiciatis officia laboriosam nihil eligendi corrupti
+                            provident sunt dolor modi velit nesciunt! Rerum, consequuntur fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi itaque officia repellat vero repellendus id corporis architecto autem totam obcaecati praesentium, veritatis iure voluptate non, dolore, ratione rerum quis?</p>
+                    </div>
+                </div>
+            </div>
             <div class="hero__carousel__list">
-                <div class="hero__carousel__list__item">
+                <div class="hero__carousel__list__item bleach">
                     <img src="./src/images/heros/bg-bleach__hero2.jpeg" alt="">
                     <div class="content">
                         <h1 class="title">Bleach: Thousand-Year Blood War</h1>
-                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
-                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est
+                            beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur
+                            blanditiis
                             perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
-                            <div class="buttons">
-                                <button type="button" class="button--transparent">
-                                    <i class="fa-regular fa-bookmark"></i>
-                                </button>
-                                <a href="#" class="button--transparent">Explore Anime</a>
-                            </div>
+                        <div class="buttons">
+                            <button type="button" class="button--transparent">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <a href="#" onclick="addClass()" class="button--transparent anime__informacao" id="informacoes">Explore Anime</a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero__carousel__list__item">
+                <div class="hero__carousel__list__item black">
                     <img src="./src/images/heros/bg-BlackClover__hero.jpg" alt="">
                     <div class="content">
                         <h1 class="title">Black Clover</h1>
-                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
-                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est
+                            beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur
+                            blanditiis
                             perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
-                            <div class="buttons">
-                                <button type="button" class="button--transparent">
-                                    <i class="fa-regular fa-bookmark"></i>
-                                </button>
-                                <a href="#" class="button--transparent">Explore Anime</a>
-                            </div>
+                        <div class="buttons">
+                            <button type="button" class="button--transparent">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <a href="#" onclick="addClass()" class="button--transparent">Explore Anime</a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero__carousel__list__item">
+                <div class="hero__carousel__list__item stone">
                     <img src="./src/images/heros/bg-dr__stone__hero.jpg" alt="">
                     <div class="content">
                         <h1 class="title">Dr. Stone: Stone Wars Eve of the Battle</h1>
-                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
-                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est
+                            beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur
+                            blanditiis
                             perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
-                            <div class="buttons">
-                                <button type="button" class="button--transparent">
-                                    <i class="fa-regular fa-bookmark"></i>
-                                </button>
-                                <a href="#" class="button--transparent">Explore Anime</a>
-                            </div>
+                        <div class="buttons">
+                            <button type="button" class="button--transparent">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <a href="#" onclick="addClass()" class="button--transparent">Explore Anime</a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero__carousel__list__item">
+                <div class="hero__carousel__list__item demon">
                     <img src="./src/images/heros/bg-demonSlayer__hero.png" alt="">
                     <div class="content">
                         <h1 class="title">Demon Slayer: Kimetsu no Yaiba</h1>
-                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
-                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est
+                            beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur
+                            blanditiis
                             perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
-                            <div class="buttons">
-                                <button type="button" class="button--transparent">
-                                    <i class="fa-regular fa-bookmark"></i>
-                                </button>
-                                <a href="#" class="button--transparent">Explore Anime</a>
-                            </div>
+                        <div class="buttons">
+                            <button type="button" class="button--transparent">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <a href="#" onclick="addClass()" class="button--transparent">Explore Anime</a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero__carousel__list__item">
+                <div class="hero__carousel__list__item rurouni">
                     <img src="./src/images/heros/bg-rurouni__hero.jpg" alt="">
                     <div class="content">
-                        <h1 class="title">Rurouni Kenshin: 
+                        <h1 class="title">Rurouni Kenshin:
                             Meiji Kenkaku
                             Romantan</h1>
-                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est beatae consequuntur
-                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur blanditiis
+                        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae est
+                            beatae consequuntur
+                            explicabo error! Est a possimus repudiandae doloribus consectetur tenetur consequuntur
+                            blanditiis
                             perspiciatis. Voluptatem molestiae corporis aut voluptate.</p>
-                            <div class="buttons">
-                                <button type="button" class="button--transparent">
-                                    <i class="fa-regular fa-bookmark"></i>
-                                </button>
-                                <a href="#" class="button--transparent">Explore Anime</a>
-                            </div>
+                        <div class="buttons">
+                            <button type="button" class="button--transparent">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <a href="#" onclick="addClass()" class="button--transparent">Explore Anime</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,15 +227,16 @@
                 </div>
             </div>
             <div class="hero__carousel__arrows">
-                <button id="prev"><</button>
-                <button id="next">></button>
+                <button id="prev">
+                    <</button>
+                        <button id="next">></button>
             </div>
             <div class="hero__carousel__time"></div>
         </div>
     </section>
     <section class="animes">
         <div class="container">
-            
+
             <div class="banner">
                 <img src="./src/images/banners/naruto_banner.png" alt="">
                 <div class="banner__anuncio">
@@ -257,7 +307,7 @@
                             </div>
                             <div class="card__body">
                                 <div class="content">
-                                    <h4 class="title">Series:Uma Musume: 
+                                    <h4 class="title">Series:Uma Musume:
                                         Pretty Derby Season 3</h4>
                                     <div class="info">
                                         <span><i class="fa-solid fa-eye"></i> 10.5k watching</span>
@@ -269,8 +319,9 @@
                     </ul>
                 </div>
                 <div class="animes__stream__arrows button--blur">
-                    <button id="prev"><</button>
-                    <button id="next">></button>
+                    <button id="prev">
+                        << /button>
+                            <button id="next">></button>
                 </div>
             </article>
 
@@ -299,8 +350,9 @@
                     </ul>
                 </div>
                 <div class="animes__stream__arrows button--blur">
-                    <button id="prev"><</button>
-                    <button id="next">></button>
+                    <button id="prev">
+                        << /button>
+                            <button id="next">></button>
                 </div>
             </article>
         </div>
@@ -326,7 +378,7 @@
                         <ul class="list">
                             <li class="list__item">
                                 <a href="#"><i class="fa-brands fa-youtube"></i>Youtube</a>
-                                
+
                             </li>
                             <li class="list__item">
                                 <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
@@ -381,7 +433,8 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="./dist/js/main.js"></script>
 </body>
+
 </html>

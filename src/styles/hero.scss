@@ -1,10 +1,10 @@
 @use 'variaveis';
 
 .hero{
-    margin-top: -80px;
+    margin-top: -82px;
 
     @media(max-width: 767px) {
-        margin-top: -65px;
+        margin-top: -72px;
     }
 
     @media(min-width: 768px) and (max-width: 1023px){
@@ -26,6 +26,7 @@
                 height: 100%;
                 object-fit: cover;
                 overflow-x:hidden;
+                filter: brightness(75%);
             }
 
             .content{
@@ -48,6 +49,104 @@
     }
 }
 
+.hero__info{
+
+    &--close{
+        display: block;
+        animation: displayContent .8s linear forwards;
+    }
+    &--active{
+        display: block;
+        opacity: 0;
+        height: 0%;
+        animation: scaleContent .5s linear forwards;
+    }
+    display: none;
+    width: 75%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 80vh;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    left:50%;
+    overflow-y: hidden;
+    padding: 24px;
+    border-radius: 16px;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    opacity: 1;
+    background-color: map-get(variaveis.$bgColors, primary);
+    
+    .close__info{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        padding: 5px 8px;
+        background-color: transparent;
+        //border: none;
+        outline: none;
+        color: #ccc;
+        font-size: 1.5rem;
+    }
+
+    &__content{
+        margin-top: 25px;
+        padding: 12px 0;
+        &__item{
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+
+        .title{
+            max-height: 6rem;
+            overflow-y: hidden;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: 'bebas Neue';
+            letter-spacing: 5px;
+            text-transform: capitalize;
+            line-height: 2rem;
+        }
+
+        .desc{
+            max-height: 25rem;
+            padding-bottom: 12px;
+            overflow-y: scroll;
+            font-family: "Antic", sans-serif;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            text-align: start;
+        }
+    }
+}
+
+@keyframes displayContent {
+    from{
+        height: 100%;
+        opacity: 1;
+
+    }
+
+    to{
+        display: none;
+        height: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes scaleContent{
+    to{
+        opacity: 1;
+        scale: 1;
+        height: 100%;
+    }
+}
+
 .hero__carousel__list__item{
     
     .content{
@@ -58,12 +157,15 @@
             letter-spacing: 5px;
             text-transform: capitalize;
 
-            @media(max-width: 500px){
+            @media(max-width: 760px){
                 overflow-y: hidden;
-                max-height: 80px;
+                letter-spacing: 2px;
+                font-size: 2rem;
+                line-height: 2.5rem;
+                max-height: 4.55rem;
             }
         }
-        }
+    }
 
 
 
@@ -73,8 +175,11 @@
             flex-wrap: wrap;
 
             @media(max-width: 500px){
-                max-height: 95px;
                 overflow-y: hidden;
+                font-size: 1.2rem;
+                margin-top: 1rem;
+                line-height: 1.5rem;
+                max-height: 6rem;
             }
         }
 
@@ -88,8 +193,9 @@
 
             @media (max-width: 767px){
                 grid-template-columns: 40px 1fr;
+                margin-top: 8px;
             }
-            button{
+            button:first-child{
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
@@ -120,6 +226,7 @@
                 font-family: 'bebas Neue', sans-serif;
                 text-align: center;
                 font-size: 24px;
+                letter-spacing: 1.5px;
                 transition: .5s;
                 @media (max-width: 768px){
                     font-size: 16px;
@@ -159,15 +266,16 @@
             height: 100%;
             object-fit: cover;
             border-radius: 16px;
+            filter: brightness(75%);
+            -webkit-filter: brightness(75%);
         }
 
         .content{
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
             left: 10px;
             right: 10px;
-            text-shadow: map-get(variaveis.$textColors, textShadow),map-get(variaveis.$textColors, textShadow),
-            map-get(variaveis.$textColors, textShadow);
+            text-shadow: map-get(variaveis.$textColors, textShadow),map-get(variaveis.$textColors, textShadow);
 
             .desc{
                 @media(max-width: 500px){
@@ -438,6 +546,7 @@
         .content{
             .title{
                 font-size: 30px;
+                
             }
         }
         }
