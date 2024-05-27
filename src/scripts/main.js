@@ -15,11 +15,15 @@ let animeInformacao = document.getElementsByClassName('anime__informacao');
 let animeContent = document.querySelector('.hero__info')
 let slider = document.querySelectorAll('.hero__carousel__list__item');
 let contentInfo = document.querySelectorAll('.hero__info__content__item');
-let position;
+
+let position = 0;
+
 
 
 function addClass() {
-    animeContent.classList.add('hero__info--active')
+    animeContent.classList.add('hero__info--active');
+
+
     if(slider[position].classList.contains('bleach')){
         for(let valor of contentInfo){
             if(valor.classList.contains('active')){
@@ -72,9 +76,8 @@ function removeClass(){
     removeClose = setTimeout(() => {
         animeContent.classList.remove('hero__info--close');
     }, 2000)
-    clearInterval(removeClass);
 }
-
+clearInterval(removeClose);
 
 buttonOpenLinks.onclick = () => {
     abaLinks.classList.add('header__links__list--open')
@@ -91,7 +94,7 @@ nextDom.onclick = () =>{
 
 prevDom.onclick = () => {
     showSlider('prev');
-    position = 4
+    position = slider.length - 1 
 }
 
 let timeRunnig = 3000;
@@ -99,7 +102,6 @@ let timeAutonext = 7000;
 let runAutoRun;
 let runTimeOut;
 
-clearTimeout(runAutoRun)
 runAutoRun = setTimeout(() => {
     nextDom.click()
 }, timeAutonext);
@@ -130,13 +132,17 @@ function showSlider(type){
         carouselDom.classList.remove('next');
         carouselDom.classList.remove('prev');
     }, timeRunnig)
-    clearInterval(runAutoRun);
+
 }
 
 
 
 
+
 document.addEventListener('DOMContentLoaded', function(){
+
+    
+
     const heroSection = document.querySelector('.hero');
     const alturaHero = heroSection.clientHeight;
 

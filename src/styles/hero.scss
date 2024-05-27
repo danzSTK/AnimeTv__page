@@ -49,8 +49,10 @@
     }
 }
 
-.hero__info{
 
+
+.hero__info{
+    
     &--close{
         display: block;
         animation: displayContent .8s linear forwards;
@@ -84,7 +86,7 @@
         right: 20px;
         padding: 5px 8px;
         background-color: transparent;
-        //border: none;
+        border: none;
         outline: none;
         color: #ccc;
         font-size: 1.5rem;
@@ -126,12 +128,14 @@
 }
 
 @keyframes displayContent {
-    from{
+    0%{
         height: 100%;
         opacity: 1;
-
     }
 
+    50%{
+        opacity: 1;
+    }
     to{
         display: none;
         height: 0%;
@@ -153,9 +157,12 @@
 
         .title{
             font-family: 'bebas Neue';
-            font-size: 4em;
+            font-size: 4rem;
             letter-spacing: 5px;
             text-transform: capitalize;
+            line-height: 4.5rem;
+            max-height: 9rem;
+            overflow-y: hidden;
 
             @media(max-width: 760px){
                 overflow-y: hidden;
@@ -171,7 +178,10 @@
 
         .desc{
             font-family: 'Antic', sans-serif;
-            font-size: 16px;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            max-height: 7.5rem;
+            overflow-y:hidden;
             flex-wrap: wrap;
 
             @media(max-width: 500px){

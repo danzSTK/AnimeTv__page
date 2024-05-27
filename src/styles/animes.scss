@@ -1,12 +1,13 @@
 @use 'variaveis';
 
-@mixin gridSections($repat: 4){
+@mixin gridSections($repat: 4, $gap: 36px){
     display: grid;
-    grid-template-columns: repeat($repat, 1fr);
+    grid-template-columns: repeat($repat, calc(100% / $repat - $gap));
+    place-items: center;
     gap: 36px;
 
     @media(max-width: 500px){
-        gap: 25px;
+        gap: 16px;
     }
 }
 
@@ -18,7 +19,8 @@
     border-radius: 16px;
 
     @media(max-width: 500px){
-        max-width: 180px;
+        width: 100%;
+        max-width: 150px;
         height: 200px;
     }
 }
@@ -39,7 +41,7 @@
         border-radius: 16px;
 
         @media(max-width: 767px ) {
-            height: 200px;
+            height: 175px;
         }
     }
 
@@ -55,6 +57,11 @@
         justify-content: space-between;
         align-items: center;   
 
+        @media(max-width: 650px){
+            height: 50px;
+            padding: 8px 16px;
+        }
+
         &__buttons{
             a{
                 text-decoration: none;
@@ -68,6 +75,7 @@
 
                 @media(max-width: 767px ){
                     display: block;
+                    text-align: center;
                     width: 10em;
                     padding: 4px 8px;
                     font-size: 12px;
@@ -98,6 +106,9 @@
                 position: relative;
                 padding: 0 16px;
 
+                @media(max-width: 650px){
+                    padding: 0 8px;
+                }
                 span{
                     background-color: #FAC919;
                     color: #000;
@@ -112,6 +123,13 @@
                     align-items: center;
                     position: absolute;
                     left:0;
+
+                    @media(max-width: 650px){
+                        width: 15px;
+                        height: 12px;
+                        font-size: 8px;
+                        top: 4px;
+                    }
                 }
                 .title{
                     font-family: 'Be Vietnam Pro', sans-serif;
@@ -120,7 +138,8 @@
                     margin-left: 12px;
 
                     @media(max-width: 767px ){
-                        font-size: 15px;
+                        font-size: 0.8rem;
+                        line-height: 1.2rem;
                     }
                 }
                 .desc{
@@ -130,7 +149,11 @@
 
                     @media(max-width: 767px ){
                         flex-wrap: wrap;
-                        font-size: 8px;
+                        font-size: 0.6rem;
+                        line-height: 0.8rem;
+                        max-height: 1.6rem;
+                        overflow-y: auto;
+                        margin-left: 12px;
                     }
                 }
             }
@@ -150,7 +173,7 @@
         }
 
         @media(max-width: 767px){
-            @include gridSections(2)
+            @include gridSections(2, 0.84rem)
         }
         
 
@@ -174,10 +197,9 @@
                 width: 100%;
                 height: 180px;
                 object-fit: cover;
-                aspect-ratio: 3/4;
                 object-position: top;
 
-                @media(max-width: 500px){
+                @media(max-width: 650px){
                     height: 100px;
                 }
             }
@@ -269,7 +291,7 @@
         }
 
         @media(max-width: 767px ){
-            @include gridSections(2)
+            @include gridSections(2, 0.84rem)
         }
 
         &__item{
